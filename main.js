@@ -64,13 +64,18 @@ let editItem = (e) => {
 
     let val1 = e.parentNode.childNodes[0].innerHTML;
     let editValue1 = prompt("Enter edit value: ", val1);
-    if (editValue1 !== null) {
+    if (editValue1 !== "") {
         e.parentNode.childNodes[0].innerHTML = editValue1;
+    } else {
+        alert("empty value not allowed!");
     }
+
     let val2 = e.parentNode.childNodes[1].innerHTML;
     let editValue2 = prompt("Enter edit value: ", val2);
-    if (editValue2 !== null) {
+    if (editValue2 !== "") {
         e.parentNode.childNodes[1].innerHTML = editValue2;
+    } else {
+        alert("empty value not allowed!");
     }
     // console.log(val1);
     // console.log(val2);
