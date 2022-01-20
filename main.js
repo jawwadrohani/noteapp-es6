@@ -40,12 +40,11 @@ let addTodo = () => {
     li.appendChild(editBtn);
     list.appendChild(li);        
     // console.log(li);
-    } else {
-        alert("Please enter values !!");
-    }
     todo_item.value = "";
     todo_note.value = "";
-    
+    } else {
+        alert("Please enter values !!");        
+    } 
 }
 
 let deleteItem = (e) => {
@@ -62,21 +61,41 @@ let editItem = (e) => {
 
     
 
-    let val1 = e.parentNode.childNodes[0].innerHTML;
-    let editValue1 = prompt("Enter edit value: ", val1);
-    if (editValue1 !== "") {
-        e.parentNode.childNodes[0].innerHTML = editValue1;
-    } else {
-        alert("empty value not allowed!");
-    }
+    // let val1 = e.parentNode.childNodes[0].innerHTML;
+    // let editValue1 = prompt("Enter edit title value: ", val1);
+    // if (editValue1 !== "") {
+    //     e.parentNode.childNodes[0].innerHTML = editValue1;
+    // } else {
+    //     alert("empty title not allowed!");
+    // }
+    
+    // let val2 = e.parentNode.childNodes[1].innerHTML;
+    // let editValue2 = prompt("Enter edit note value: ", val2);
+    // if (editValue2 !== "") {
+    //     e.parentNode.childNodes[1].innerHTML = editValue2;
+    // } else {
+    //     alert("empty note not allowed!");
+    // }
+    let editValue1,val1;
+    do {
+        val1 = e.parentNode.childNodes[0].innerHTML;
+        editValue1 = prompt("Enter edit title value: ", val1);
+        if(editValue1 === ""){alert("Empty TITLE not allowed!");}
+        
+    } while (editValue1 === "");
+    
+    if(editValue1 !== null){e.parentNode.childNodes[0].innerHTML = editValue1;}        
 
-    let val2 = e.parentNode.childNodes[1].innerHTML;
-    let editValue2 = prompt("Enter edit value: ", val2);
-    if (editValue2 !== "") {
-        e.parentNode.childNodes[1].innerHTML = editValue2;
-    } else {
-        alert("empty value not allowed!");
-    }
+    let editValue2,val2;
+    do {
+        val2 = e.parentNode.childNodes[1].innerHTML;
+        editValue2 = prompt("Enter edit title value: ", val2);
+        if (editValue2 === "") { alert("Empty NOTE not allowed!"); }
+    } while (editValue2 === "");      
+    if(editValue2 !== null){e.parentNode.childNodes[1].innerHTML = editValue2;}
+
+
+
     // console.log(val1);
     // console.log(val2);
     // console.log(e.parentNode.childNodes.length);
