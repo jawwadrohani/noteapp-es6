@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;   
+    margin-top: 20px; 
+}
+
+.container div{    
+    /* background-color: yellow;     */
+}
+.container div:first-child{    
+    display: flex;
+    justify-content: center;
+}
+
+
+.btn-container{
+    display: inline-block;
+    background-color: orange;
+    color: #fff;
+    padding: 0px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 50px;
+}
+
+.container .btn-container:last-child{
+    background-color: red;
+}
+
+#todo-item{
+    width: 200px;
+    padding: 10px;
+}
+
+#todo-note{
+    width: 433.13px;
+    height: 50px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#list{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#list li{
+    width: 433.13px;
+    background-color: yellow;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+#list li button{
+    padding:10px 25px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin:10px 10px 0px 0px;
+}
